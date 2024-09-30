@@ -32,13 +32,14 @@ struct Location: Identifiable, Codable, Comparable {
   
   
   // To conform to Comparable protocol
-  static func < (lhs: Location, rhs: Location) -> Bool {
-      return lhs.name < rhs.name
-  }
-  
-  static func == (lhs: Location, rhs: Location) -> Bool {
-      return lhs.name == rhs.name && lhs.scans == rhs.scans
-  }
+    static func < (lhs: Location, rhs: Location) -> Bool {
+       lhs.name < rhs.name
+     }
+     
+     static func == (lhs: Location, rhs: Location) -> Bool {
+       lhs.name == rhs.name
+     }
+     
   
   // MARK: Example for SwiftUI
   
